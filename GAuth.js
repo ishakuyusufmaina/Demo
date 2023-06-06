@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
-import {getAuth, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"
+import {getAuth, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js"
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
