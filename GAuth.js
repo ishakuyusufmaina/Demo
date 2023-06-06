@@ -23,7 +23,7 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 
-alert(9);
+alert(9+9);
 loginPage=`<h1>Sign in</h2>
 <h2>Maina GAuth Demo</h2>
 <p>You are now signed out</p>
