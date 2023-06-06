@@ -1,3 +1,3 @@
 alert(10);
-main.innerHTML = "Changed";
+document.getElementById("main").innerHTML = "Changed";
   
