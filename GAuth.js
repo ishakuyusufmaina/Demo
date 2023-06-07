@@ -33,7 +33,6 @@ var homePage = `<h1>Home Page</h2>
 <p>You are now signed in as <span id="user"></span></p>
 <button onclick ="signout()">Sign out</button>`;
 
-alert(6);
 
 
 var main = document.getElementById("main");
@@ -51,7 +50,8 @@ function signin(){
 }
 
 getRedirectResult(auth).then((result)=>{
-    alert("sucessfully signed in")
+    alert("sucessfully signed in");
+  main.innerHTML = homePage;
 }).catch((error)=>{
     alert("error: " + error)
 })
@@ -59,6 +59,7 @@ getRedirectResult(auth).then((result)=>{
 function signout(){
     signOut(auth).then(()=>{
         alert("Successfully signed out")
+      main.innerHTML = loginPage;
     }).catch((error)=>{
         alert(error)
     })
