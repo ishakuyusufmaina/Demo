@@ -37,7 +37,7 @@ alert(6);
 
 
 var main = document.getElementById("main");
-alert(widow.localStoragr.getItem("user") + " " + main);
+alert(window.localStoragr.getItem("user") + " " + main);
 if(window.localStorage.getItem("user")){
     main.innerHTML = homePage;
     document.getElementById("user").innerHTML = "user: " + localStorage.getItem("user");
