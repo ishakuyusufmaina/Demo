@@ -51,8 +51,14 @@ function signin(){
 }
 
 getRedirectResult(auth).then((result)=>{
-    alert("sucessfully signed in");
+  if (result.credential){
+    alert("sucessfully signed in as:" + result.user
+
+
+         
+);
   main.innerHTML = homePage;
+    }
 }).catch((error)=>{
     alert("error: " + error)
 })
