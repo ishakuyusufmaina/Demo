@@ -23,12 +23,12 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 
-loginPage=`<h1>Sign in</h2>
+var loginPage=`<h1>Sign in</h2>
 <h2>Maina GAuth Demo</h2>
 <p>You are now signed out</p>
 <button onclick="signin()">Sign in with Google</button>`;
 
-homePage = `<h1>Home Page</h2>
+var homePage = `<h1>Home Page</h2>
 <h2>Maina Gauth Demo</h2>
 <p>You are now signed in as <span id="user"></span></p>
 <button onclick ="signout()">Sign out</button>`;
