@@ -37,8 +37,8 @@ homePage = `<h1>Home Page</h2>
 
 
 
-let main = document.getElementById("main");
-
+var main = document.getElementById("main");
+alert(widow.localStoragr.getItem("user") + " " + main);
 if(window.localStorage.getItem("user")){
     main.innerHTML = homePage;
     document.getElementById("user").innerHTML = "user: " + localStorage.getItem("user");
