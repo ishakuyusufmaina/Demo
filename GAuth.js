@@ -39,7 +39,7 @@ homePage = `<h1>Home Page</h2>
 
 let main = document.getElementById("main");
 
-if(localStorage.getItem("user")){
+if(window.localStorage.getItem("user")){
     main.innerHTML = homePage;
     document.getElementById("user").innerHTML = "user: " + localStorage.getItem("user");
 }
@@ -69,10 +69,10 @@ onAuthStateChanged(auth, (user)=>{
     if (user){
         main.innerHTML = homePage;
         document.getElementById("user").innerHTML = "user: " + user;
-        localStorage.setItem("user", user);
+        window.localStorage.setItem("user", user);
     }
     else {
-        localStorage.removeItem("user");
+        window.localStorage.removeItem("user");
         main.innerHTML = loginPage;
     }
 })
