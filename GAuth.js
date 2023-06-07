@@ -33,7 +33,10 @@ var homePage = `<h1>Home Page</h2>
 <p>You are now signed in as <span id="user"></span></p>
 `;
 
+var signinBtn = document.getElementById("signinBtn");
+var signoutBtn = document.getElementById("signoutBtn");
 
+signinBtn.addEventListener("click", ()=>{signin()});
 
 var main = document.getElementById("main");
 alert(window.localStorage.getItem("user") + " " + main);
