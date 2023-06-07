@@ -46,6 +46,7 @@ else {
 }
 
 function signin(){
+  alert("sign in click!");
     signInWithRedirect(auth, provider)
 }
 
