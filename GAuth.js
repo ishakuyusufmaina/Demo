@@ -38,7 +38,7 @@ var signoutBtn = document.getElementById("signoutBtn");
 
 signinBtn.addEventListener("click", ()=>{signin()});
 signoutBtn.addEventListener("click", ()=>{signout()});
-signinBtn.innerHTML="Sign...";
+//signinBtn.innerHTML="Sign...";
 var main = document.getElementById("main");
 alert(window.localStorage.getItem("user") + " " + main);
 if(window.localStorage.getItem("user")){
@@ -51,7 +51,7 @@ else {
 
 function signin(){
   alert("sign in click!");
-    signInWithRedirect(auth, provider)
+    signInWithRedirect(provider)
 }
 
 getRedirectResult(auth).then((result)=>{
