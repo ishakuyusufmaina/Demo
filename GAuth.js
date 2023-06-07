@@ -26,12 +26,12 @@ const provider = new GoogleAuthProvider();
 var loginPage=`<h1>Sign in</h2>
 <h2>Maina GAuth Demo</h2>
 <p>You are now signed out</p>
-<button onclick="signin()">Sign in with Google</button>`;
+`;
 
 var homePage = `<h1>Home Page</h2>
 <h2>Maina Gauth Demo</h2>
 <p>You are now signed in as <span id="user"></span></p>
-<button onclick ="signout()">Sign out</button>`;
+`;
 
 
 
@@ -39,7 +39,7 @@ var main = document.getElementById("main");
 alert(window.localStorage.getItem("user") + " " + main);
 if(window.localStorage.getItem("user")){
     main.innerHTML = homePage;
-    document.getElementById("user").innerHTML = "user: " + localStorage.getItem("user");
+    //document.getElementById("user").innerHTML = "user: " + localStorage.getItem("user");
 }
 else {
     main.innerHTML = loginPage;
@@ -68,7 +68,7 @@ function signout(){
 onAuthStateChanged(auth, (user)=>{
     if (user){
         main.innerHTML = homePage;
-        document.getElementById("user").innerHTML = "user: " + user;
+       // document.getElementById("user").innerHTML = "user: " + user;
         window.localStorage.setItem("user", user);
     }
     else {
