@@ -37,7 +37,8 @@ var signinBtn = document.getElementById("signinBtn");
 var signoutBtn = document.getElementById("signoutBtn");
 
 signinBtn.addEventListener("click", ()=>{signin()});
-signBtn.innerHTML="Sign...";
+signoutBtn.addEventListener("click", ()=>{signout()});
+signinBtn.innerHTML="Sign...";
 var main = document.getElementById("main");
 alert(window.localStorage.getItem("user") + " " + main);
 if(window.localStorage.getItem("user")){
