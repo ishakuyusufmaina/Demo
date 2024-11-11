@@ -22,18 +22,18 @@
 </head>
 <body>
   <div id="ed" contenteditable>
-    
+    s
   </div>
   <button id="run">run</button>
   <div id="e"></div>
     <script type="py" target="e" terminal worker>
-        from pyscript import display
+        from pyscript import display, document
         import code
         code.interact()
         input("Enter")
-        #ed = document.getElementById("ed")
-        #run = document.getElementById("run")
-        #run.onclick = lambda a : eval((ed.innerText))
+        ed = document.getElementById("ed")
+        run = document.getElementById("run")
+        run.onclick = lambda a : eval((ed.innerText))
         print("Hello terminal!")
     
   </script>
