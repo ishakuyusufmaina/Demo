@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    href="https://pyscript.net/releases/2023.11.2/core.css" />
+    <script type="module"
+    src="https://pyscript.net/releases/2023.11.2/core.js">
+    </script>
+<style>
+#e {
+  height: 200px;
+  width: 100%;
+  border: 2px solid black;
+}
+#ed {
+  height: 200px;
+  width: 100%;
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+  <div id="ed" contenteditable>
+    
+  </div>
+  <button id="run">run</button>
+  <div id="e"></div>
+    <script type="py" terminal target="e">
+        from pyscript import display, document
+        ed = document.getElementById("ed")
+        run = document.getElementById("run")
+        run.onclick = lambda a : eval((ed.innerText))
+        #print("Hello terminal!")
+    
+  </script>
+
+</body>
+</html>
