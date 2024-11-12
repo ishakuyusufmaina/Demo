@@ -22,7 +22,7 @@
 </head>
 <body>
   <div id="ed" contenteditable>
-    
+    a
   </div>
   <button id="run">run</button>
   <div id="e"></div>
@@ -33,7 +33,7 @@ import code
 input("Enter")
 ed = document.getElementById("ed")
 run = document.getElementById("run")
-run.onclick = lambda a : eval(ed.textContent)
+run.onclick = lambda a : exec(ed.innerText)
 print("Hello terminal!")
     
   </script>
