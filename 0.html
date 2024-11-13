@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="mini_coi.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js"></script>
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" />
+<script type="module" 
+  src="https://pyscript.net/releases/2023.11.2/core.js"></script>
+  <title>Input Function</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Main Container Styling */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f4f4f9;
+     // display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Headings Styling */
+    h1, h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+
+    /* Paragraph and Code Styling */
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    code {
+      font-family: monospace;
+      color: #d14;
+      background: #f1f1f1;
+      padding: 3px 5px;
+      border-radius: 4px;
+    }
+
+    /* Experiment Section Styling */
+    .experiment {
+      background: #f9f9f9;
+      border-left: 5px solid #4a90e2;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+
+    /* Code Block Styling */
+    .code-block {
+      background: #333;
+      color: #fff;
+      color: #d14;
+      background: #f1f1f1;
+      padding: 0px;
+      border-radius: 4px;
+      font-size: 1em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  .code-block * {
+   // background: inherit;
+ //   color: inherit;
+  }
+
+    /* IDE Section Styling */
+    .ide {
+      margin-top: 15px;
+    //  display: flex;
+   //   align-items: center;
+    //  justify-content: center;
+    }
+
+    #run {
+      background: #4a90e2;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    #run:hover {
+      background: #357ab8;
+    }
+
+    .code-editor {
+     // background: #f1f1f1;
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 100px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-family: monospace;
+      font-size: 1em;
+    }
+
+    #terminal {
+      background: #1d1d1d;
+      color: #39ff14;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      height: 200px;
+      //width: 400px;
+      margin-top: 20px;
+      white-space: pre-wrap;  /* Preserve line breaks */
+      position: relative;
+    }
+
+
+    /* Link Styling */
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  .syntax{
+    display: block;
+    text-align: center;
+  }
+
+/* Spinning loader styling */
+.spinning-loader {
+  width: 50px;                /* Loader width */
+  height: 50px;               /* Loader height */
+  border: 5px solid #333;     /* Dark gray border */
+  border-top: 5px solid #f5f5f5; /* Light-colored border on top for visibility */
+  border-radius: 50%;         /* Make it circular */
+  animation: spin 1s linear infinite; /* Spinning animation */
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+  z-index: 5;
+
+}
+
+/* Keyframes for the spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 13: <code>input</code> Function</h1>
+    <p>
+      The input function gets an input from user. 
+      The command
+      <br><code class="syntax">input(msg)</code><br>
+      will prompt the user with a message,
+      <code>msg</code>, to enter an input.
+    </p>
+    <p>
+      The input function returns the input entered by the user as a string. 
+      The input entered by the user is then, usually, assigned to a variable for later use.
+      For example, by saying 
+      <br><code><span style="color: blue;">name</span> = input("Enter your name: ")</code>,<br>
+      the computer will prompt the user 
+      <br><em>Enter your name: </em>
+      <br>and wait for the user’s name.
+      Then, the name will be assigned to the variable <code><span style="color: blue;">name</span></code>.
+    </p>
+    <hr>
+    <div class="experiment">
+      <h2>Program: User Greeter</h2>
+      <p>
+        Below is the code for User Greeter, a program that prompts the user to enter a name and greets the user by the name entered by the user.
+      </p>
+      <div class="code-block">
+        <code>username = input('Name: ')</code><br>
+        <code>print('Hello', username)</code>
+      </div>
+      <p>
+        Type the User Greeter code in the editor below and run the program to see how the <code>input</code> function works.
+      </p>
+      <div class="ide">
+        <div class="code-editor" id="editor"></div>
+        <button id="run">Run</button>
+        <div id="terminal"><div class="spinning-loader"></div></div>
+      </div>
+    </div>
+    <a href="pre_end.html">Assessment</a>
+  </div>
+  <div id="code-container" style="display: none">
+  </div>
+  
+  
+  <script>
+        // Initialize Ace Editor
+        const editor = ace.edit("editor");
+        editor.session.setMode("ace/mode/python");
+        editor.setTheme("ace/theme/monokai");
+
+        // Run Code function
+        function runCode() {
+            const code = editor.getValue();
+            const outputDiv = document.getElementById("output");
+            outputDiv.textContent = "Execution result (replace with backend execution):\n" + code;
+
+            // Normally, you would send `code` to a backend service to execute Python
+            // and then display the result in `outputDiv`. Here, we just display the code.
+        }
+  let codeCont = document.getElementById("code-container");
+  document.querySelector("#editor").oninput = (e)=>{
+    codeCont.innerHTML = editor.getValue();
+  }
+  run.onclick = ()=>{
+     let loadElm = document.querySelector(".spinning-loader");
+    if (loadElm) {
+      alert("Wait for the terminal to get ready");
+    }
+  }
+    </script>
+<script type="py" id="py-terminal" target="terminal" terminal worker>
+from pyscript import display, document
+#import code
+       # code.interact()
+loadElm = document.querySelector(".spinning-loader");
+runBtn = document.getElementById("run")
+term = document.getElementById("terminal");
+term.removeChild(loadElm)
+codeCont = document.getElementById("code-container")
+runBtn.onclick = lambda e : exec(codeCont.innerText)
+print("Python terminal is ready!")
+</script>
+    
+
+<footer>
+  ©Maina
+</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Input Function</title>
+<style>
+  body {
+    background-color: rgba(0, 20, 20, .9);
+    color: #ffffff;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+  }
+  .prompt {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    border: 0.5px solid white;
+    padding: 2px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: rgba(0, 20, 20, .9);
+    opacity: 0.7;
+  }
+  prompt:before {
+    content: "Activity";
+    border-bottom: 1px solid white;
+  }
+  .prompt>code:before {
+    content: "";
+  }
+  .input-field {
+    background-color: #333;
+    color: #00ff00;
+    border: none;
+    border-bottom: 2px solid #444;
+    padding: 2px 5px;
+    font-family: monospace;
+    font-size: 1em;
+    width: auto;
+  }
+  .input-field::placeholder {
+    color: #777;
+  }
+  .result {
+    color: #00ff00;
+    margin-top: 10px;
+  }
+ .flag {
+   display: flex;
+ }
+  
+  .flag > * {
+    //display: inline-block;
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1/1;
+  }
+  .green {
+    background: green;
+  }
+  .white {
+    background: white;
+  }
+  .green {
+    background: green;
+  }
+  
+  button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Add some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+  
+   
+
+.prompt:hover {
+  transform: scale(1.05); /* Slight zoom in on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="flag">
+  <div class="green"></div>
+  <div class="white"></div>
+  <div class="green"></div>
+  </div>
+  <!--h2>Python Input Function Quiz</h2-->
+  <p>Fill in the blank spaces</p>
+  <h2>Activity 1</h2>
+  <div class="prompt">
+    <code>>>> name = input("Enter your name: ")</code><br>
+    <input type="text" class="input-field" placeholder="___________">: |
+  </div>
+  <h2>Activity 2</h2>
+  <div class="prompt">
+    <code>>>> age = </code><input type="text" class="input-field" placeholder="_____" style="width: 60px;"><code>("Enter your age: ")</code><br>
+    Enter your age: |
+  </div>
+  <h2>Activity 3</h2>
+  <div class="prompt">
+    <code>>>> name = </code><input type="text" class="input-field" placeholder="_____" style="width: 60px;"><code>("Enter your name: ")</code><br>
+    <input type="text" class="input-field" placeholder="___________">: |
+  </div>
+  <h2>Activity 4</h2>
+  <div class="prompt">
+    <code>>>> name = input("Enter your name: ")</code><br>
+    Enter your name: Abba<br>
+    <code>>>> print(name)</code><br>
+    <input type="text" class="input-field" placeholder="_________">
+  </div>
+  <h2>Activity 5</h2>
+  <div class="prompt">
+    <code>>>> name = input("Enter your name: ")</code><br>
+    Enter your name: <input type="text" class="input-field" placeholder="_______" style="width: 100px;"><br>
+    <code>>>> print(name)</code><br>
+    Fatima
+  </div>
+  <button>Submit</button>
+
+</div>
+
+</body>
+</html>
